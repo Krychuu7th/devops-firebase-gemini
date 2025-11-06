@@ -7,6 +7,7 @@ import {NgClass, NgIf} from '@angular/common';
 import {getDownloadURL, ref, Storage, uploadBytesResumable} from '@angular/fire/storage';
 import {getAI, getGenerativeModel, GoogleAIBackend} from '@firebase/ai';
 import {FirebaseApp} from '@angular/fire/app';
+import {environment} from '../../environment/environment';
 
 @Component({
   selector: 'app-file-upload',
@@ -34,7 +35,7 @@ export class FileUploadComponent {
 
   private readonly ai = getAI(this.firebaseApp, {backend: new GoogleAIBackend()});
   private readonly aiModel = getGenerativeModel(this.ai, {
-    model: 'gemini-2.5-flash',
+    model: environment.gemini.modelName,
   });
 
   uploadFile(event: Event) {
