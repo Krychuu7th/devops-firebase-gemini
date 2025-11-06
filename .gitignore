@@ -138,3 +138,16 @@ dist
 .idea/
 
 package-lock.json
+
+**/.terraform/*
+.tfstate
+.tfstate.backup
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+.terraform.lock.hcl
