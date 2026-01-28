@@ -2,9 +2,7 @@ const {onValueCreated} = require('firebase-functions/v2/database');
 const {initializeApp} = require('firebase-admin/app');
 const {VertexAI} = require('@google-cloud/vertexai');
 const nodemailer = require('nodemailer');
-const dotenv = require('dotenv');
 
-dotenv.config();
 initializeApp();
 
 const project = process.env.PROJECT_ID;

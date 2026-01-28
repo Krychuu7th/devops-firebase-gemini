@@ -3,7 +3,7 @@
 A simple Firebase Cloud Function whose purpose is to send email reports along with an error-fixing suggestion generated
 by Gemini.
 
-**Before deployment, fill env variables in [.env](functions/.env)**
+**Before deployment, fill env variables in [.env](../terraform/.env)**
 
 Deploy:
 
