@@ -140,14 +140,15 @@ dist
 package-lock.json
 
 **/.terraform/*
-.tfstate
-.tfstate.backup
+*.tfstate
+*.tfstate.backup
 crash.log
 crash.*.log
 override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
-.terraformrc
+*.terraformrc
 terraform.rc
-.terraform.lock.hcl
+*.terraform.lock.hcl
+*.tfvars

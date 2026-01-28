@@ -8,7 +8,7 @@ resource "google_project_service" "firebase_database" {
 
 resource "time_sleep" "wait_2_minutes" { # Po uruchomieniu usługi Firebase Realtime Database Management API potrzeba chwili zanim będzie można utworzyć instancję bazy danych
   create_duration = "2m"
-  depends_on = [google_project_service.firebase_database] # Zasób zostanie utworzony dopiero gdy usługa Firebase Realtime Database Management AP zostanie włączona
+  depends_on = [google_project_service.firebase_database] # Zasób zostanie utworzony dopiero gdy usługa Firebase Realtime Database Management API zostanie włączona
 }
 
 resource "google_firebase_database_instance" "default" {
@@ -27,12 +27,8 @@ resource "google_firebase_database_instance" "default" {
 # Można spróbować użyć do tego null_resource
 # Aktualne reguły:
 # {
-#   "rules": {
-#     "users": {
-#       "$uid": {
-#         ".read": "$uid === auth.uid",
-#         ".write": "$uid === auth.uid"
-#       }
-#     }
+#   "rules" : {
+#     ".read" : "true",
+#     ".write" : "true"
 #   }
 # }
